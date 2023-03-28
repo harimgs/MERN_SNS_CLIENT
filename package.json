@@ -32,7 +32,7 @@
     "deploy": "gh-pages -d build",
     "predeploy": "npm run build"
   },
-  "homepage": "https://harimgs.github.io/MERN_SNS_CLIENT/",
+  "homepage": "http://harimgs.github.io/MERN_SNS_CLIENT",
   "eslintConfig": {
     "extends": [
       "react-app",

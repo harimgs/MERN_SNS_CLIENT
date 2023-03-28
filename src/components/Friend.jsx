@@ -23,7 +23,7 @@ const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
 
   const patchFriend = async () => {
     const response = await fetch(
-      `https://mernsns-server-production.up.railway.app:3001/users/${_id}/${friendId}`,
+      `https://mernsns-server-production.up.railway.app/users/${_id}/${friendId}`,
       {
         method: "PATCH",
         headers: {
