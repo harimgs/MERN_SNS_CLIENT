@@ -5,7 +5,6 @@ import App from "./App";
 import authReducer from "./state";
 import { configureStore } from "@reduxjs/toolkit";
 import { Provider } from "react-redux";
-import { createHashRouter, RouterProvider } from "react-router-dom";
 
 // persist will help store all the state in to local storage unless user erase cache
 // session storage == temporary, persist = semi-permanent
@@ -34,19 +33,12 @@ const store = configureStore({
     }),
 });
 
-const router = createHashRouter([
-  {
-    path: "/*",
-    element: <App />,
-  },
-]);
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistStore(store)}>
-        <RouterProvider router={router} />
+        <App />
       </PersistGate>
     </Provider>
   </React.StrictMode>
